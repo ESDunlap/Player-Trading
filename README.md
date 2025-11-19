@@ -1,2 +1,2 @@
-# Player Tradring
+# Player Trading
 

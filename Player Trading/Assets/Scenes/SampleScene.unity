@@ -2759,7 +2759,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 996136365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2023564441}
+        m_TargetAssemblyTypeName: CreateTrade, Assembly-CSharp
+        m_MethodName: OnCreateTradeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &996136365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,6 +3299,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 495688212136756220, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
   m_PrefabInstance: {fileID: 1647273474}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1322405191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+  m_PrefabInstance: {fileID: 1647273474}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fa8bbcb0d803a4ca1c89c0c79f4126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1340801598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3464,6 +3487,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+      propertyPath: itemName
+      value: Metal
+      objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name
       value: TradeItem (1)
@@ -3478,6 +3505,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 495688212136756220, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
   m_PrefabInstance: {fileID: 1427484354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1480981077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+  m_PrefabInstance: {fileID: 1427484354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fa8bbcb0d803a4ca1c89c0c79f4126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1522692754
 GameObject:
   m_ObjectHideFlags: 0
@@ -4314,6 +4352,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600982882}
   m_CullTransparentMesh: 1
+--- !u!114 &1605709925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+  m_PrefabInstance: {fileID: 1620593853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fa8bbcb0d803a4ca1c89c0c79f4126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1620593853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4401,6 +4450,10 @@ PrefabInstance:
     - target: {fileID: 495688212136756220, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+      propertyPath: itemName
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name
@@ -4498,6 +4551,10 @@ PrefabInstance:
     - target: {fileID: 495688212136756220, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+      propertyPath: itemName
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name
@@ -5105,6 +5162,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858502261}
   m_CullTransparentMesh: 1
+--- !u!114 &1859165571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+  m_PrefabInstance: {fileID: 5269454322113911865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fa8bbcb0d803a4ca1c89c0c79f4126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1933688029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5549,6 +5617,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327be9c5a58ae7947b3f9d74cfd74f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offeringItems:
+  - {fileID: 1859165571}
+  - {fileID: 1480981077}
+  requestingItems:
+  - {fileID: 1322405191}
+  - {fileID: 1605709925}
 --- !u!114 &2023564442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6002,6 +6076,10 @@ PrefabInstance:
     - target: {fileID: 495688212136756220, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576677565125992305, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
+      propertyPath: itemName
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name

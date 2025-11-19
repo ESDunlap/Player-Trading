@@ -54,5 +54,15 @@ public class Trade : MonoBehaviour
             },
             error => Debug.Log(error.ErrorMessage)
         );
+
+        GetCatalogItemsRequest getCatalogRequest = new GetCatalogItemsRequest
+        {
+            CatalogVersion = "PlayerItems"
+        };
+
+        PlayFabClientAPI.GetCatalogItems(getCatalogRequest,
+            result => catalog = result.Catalog,
+            error => Debug.Log(error.ErrorMessage)
+        );
     }
 }

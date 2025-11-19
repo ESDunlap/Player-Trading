@@ -1,16 +1,33 @@
 using UnityEngine;
+using TMPro;
 
 public class TradeItem : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public string itemName;
+    public int value;
+    public TextMeshProUGUI displayText;
+
+    void UpdateDisplayText()
     {
-        
+        displayText.text = string.Format("{0} ({1})", itemName, value);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnAddItemButton()
     {
-        
+        value++;
+        UpdateDisplayText();
+    }
+
+    public void OnRemoveItemButton()
+    {
+        if (value > 0)
+            value--;
+        UpdateDisplayText ();
+    }
+
+    public void ResetValue()
+    {
+        value = 0;
+        UpdateDisplayText();
     }
 }

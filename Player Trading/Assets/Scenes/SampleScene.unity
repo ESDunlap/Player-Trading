@@ -1885,7 +1885,7 @@ GameObject:
   - component: {fileID: 712478656}
   - component: {fileID: 712478655}
   m_Layer: 5
-  m_Name: Offering (1)
+  m_Name: Requesting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3493,7 +3493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name
-      value: TradeItem (1)
+      value: OfferingMetal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4457,7 +4457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name
-      value: TradeItem (3)
+      value: RequestingMetal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4558,7 +4558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name
-      value: TradeItem (2)
+      value: RequestingWood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5690,6 +5690,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023564441}
+        m_TargetAssemblyTypeName: CreateTrade, Assembly-CSharp
+        m_MethodName: ResetItemValues
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2023564445
 Transform:
   m_ObjectHideFlags: 0
@@ -6083,7 +6095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4293022701404570285, guid: b806d5f2cd1f95247b225bc196e64cad, type: 3}
       propertyPath: m_Name
-      value: TradeItem
+      value: OfferingWood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

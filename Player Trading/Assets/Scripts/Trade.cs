@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 public class Trade : MonoBehaviour
 {
+    public TextMeshProUGUI displayText;
     public GameObject tradeCanvas;
     public TextMeshProUGUI inventoryText;
 
@@ -29,11 +30,6 @@ public class Trade : MonoBehaviour
 
     public void GetInventory()
     {
-
-    }
-
-    public void GetCatalog()
-    {
         inventoryText.text = "";
 
         GetPlayerCombinedInfoRequest getInvRequest = new GetPlayerCombinedInfoRequest
@@ -52,9 +48,12 @@ public class Trade : MonoBehaviour
                 foreach (ItemInstance item in inventory)
                     inventoryText.text += item.DisplayName + ", ";
             },
-            error => Debug.Log(error.ErrorMessage)
+            error => Trade.instance.SetDisplayText(error.ErrorMessage, true)
         );
+    }
 
+    public void GetCatalog()
+    {
         GetCatalogItemsRequest getCatalogRequest = new GetCatalogItemsRequest
         {
             CatalogVersion = "PlayerItems"
@@ -62,7 +61,21 @@ public class Trade : MonoBehaviour
 
         PlayFabClientAPI.GetCatalogItems(getCatalogRequest,
             result => catalog = result.Catalog,
-            error => Debug.Log(error.ErrorMessage)
+            error => Trade.instance.SetDisplayText(error.ErrorMessage, true)
         );
+    }
+
+    public void SetDisplayText(string text, bool isError)
+    {
+        displayText.text = text;
+        if (isError)
+            displayText.color = Color.red;
+        else
+            displayText.color = Color.green;
+        Invoke("HideDisplayText", 2.0f);
+    }
+    void HideDisplayText()
+    {
+        displayText.text = "";
     }
 }

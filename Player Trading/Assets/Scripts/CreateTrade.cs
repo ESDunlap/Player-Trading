@@ -23,7 +23,7 @@ public class CreateTrade : MonoBehaviour
                 ItemInstance i = tempInventory.Find(y => y.DisplayName == item.itemName);
                 if (i == null)
                 {
-                    Debug.Log("You don't have the offered items in your inventory.");
+                    Trade.instance.SetDisplayText("You don't have the offered items in your inventory.", false);
                     return;
                 }
                 else
@@ -35,7 +35,7 @@ public class CreateTrade : MonoBehaviour
         }
         if(itemsToOffer.Count == 0)
         {
-            Debug.Log("You can't trade nothing.");
+            Trade.instance.SetDisplayText("You can't trade nothing.", false);
             return;
         }
 
@@ -53,7 +53,7 @@ public class CreateTrade : MonoBehaviour
         };
         PlayFabClientAPI.OpenTrade(tradeRequest,
             result => AddTradeToGroup(result.Trade.TradeId),
-            error => Debug.Log(error.ErrorMessage)
+            error => Trade.instance.SetDisplayText(error.ErrorMessage, true)
         );
     }
     void AddTradeToGroup(string tradeId)
@@ -66,11 +66,11 @@ public class CreateTrade : MonoBehaviour
         PlayFabClientAPI.ExecuteCloudScript(executeRequest,
         result =>
         {
-            Debug.Log("Trade offer created.");
+            Trade.instance.SetDisplayText("Trade offer created.", false);
             if (Trade.instance.onRefreshUI != null)
                 Trade.instance.onRefreshUI.Invoke();
         },
-        error => Debug.Log(error.ErrorMessage)
+        error => Trade.instance.SetDisplayText(error.ErrorMessage, true)
         );
     }
 

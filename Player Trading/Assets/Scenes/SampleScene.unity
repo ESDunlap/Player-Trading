@@ -5772,9 +5772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60484d4a7990e247b6482ab6b1180b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headerText: {fileID: 0}
-  offeredItemsText: {fileID: 0}
-  requestedItemsText: {fileID: 0}
+  headerText: {fileID: 2103568684}
+  offeredItemsText: {fileID: 1951349611}
+  requestedItemsText: {fileID: 1933688031}
 --- !u!114 &2023564443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5787,7 +5787,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a82cfe23429854aaab33a25ef3c54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tradeOfferButtons: []
+  tradeOfferButtons:
+  - {fileID: 1600982884}
+  - {fileID: 816069466}
+  - {fileID: 159336497}
+  - {fileID: 1806973967}
+  - {fileID: 1119545355}
+  - {fileID: 1557570731}
+  - {fileID: 92903100}
+  - {fileID: 1257300018}
+  - {fileID: 1815074203}
+  - {fileID: 1560769221}
   tradeOffers: []
   tradeOfferInfo:
     playerIds: []

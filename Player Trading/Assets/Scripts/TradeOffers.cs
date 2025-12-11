@@ -74,11 +74,16 @@ public class TradeOffers : MonoBehaviour
 
     void UpdateTradeOffersUI()
     {
+        Debug.Log(tradeOfferButtons.Length);
+        Debug.Log(tradeOffers.Count);
         for (int x = 0; x < tradeOfferButtons.Length; ++x)
         {
             tradeOfferButtons[x].gameObject.SetActive(x < tradeOffers.Count);
-            if (tradeOfferButtons[x].gameObject.activeInHierarchy)
+            if (!tradeOfferButtons[x].gameObject.activeInHierarchy)
+            {
+                Debug.Log("Deactive");
                 continue;
+            }
             tradeOfferButtons[x].onClick.RemoveAllListeners();
             int tradeIndex = x;
             tradeOfferButtons[x].onClick.AddListener(() => OnTradeOfferButton(tradeIndex));
